@@ -1,0 +1,97 @@
+{extend name="common/layout" /}
+{block name="title"}
+    <title>index</title>
+{/block}
+{block name="slide"}
+<div class="layui-carousel" id="test1">
+  	<div carousel-item>
+	    <div><a href="{:url('index/slide1')}"><img src="__PUBLIC__/static/pic/1.jpg"></a></div>
+	    <div><a href="{:url('index/slide2')}"><img src="__PUBLIC__/static/pic/2.jpg"></a></div>
+	    <div><a href="{:url('index/slide3')}"><img src="__PUBLIC__/static/pic/3.jpg"></a></div>
+  	</div>
+</div>
+{/block}
+{block name="content"}
+<div class="layui-row" style="height:1000px">
+    <div class="layui-col-xs3">
+      	<div class="grid-demo grid-demo-bg1" ><p>本地美食</p>
+
+	      	<div class="layui-carousel" id="test2">
+		  		<div carousel-item>
+				    <div><a href="{:url('index/slide1')}"><img src="__PUBLIC__/static/pic/1.jpg"></a></div>
+				    <div><a href="{:url('index/slide2')}"><img src="__PUBLIC__/static/pic/2.jpg"></a></div>
+				    <div><a href="{:url('index/slide3')}"><img src="__PUBLIC__/static/pic/3.jpg"></a></div>
+		  		</div>
+		 	</div>
+		 	<a href="{:url('index/column1')}">this is a test link</a>
+	  	</div>
+
+    </div>
+
+    <div class="layui-col-xs1" style="height:1000px;background-color: yellow;"></div>
+
+    <div class="layui-col-xs3" style="height:200px;background-color: gray;">
+      <div class="grid-demo grid-demo-bg1">本地</div>
+      <div class="layui-carousel" id="test3">
+	  <div carousel-item>
+	  
+	    <div><a href="{:url('index/slide1')}"><img src="__PUBLIC__/static/pic/1.jpg"></a></div>
+	    <div><a href="{:url('index/slide2')}"><img src="__PUBLIC__/static/pic/2.jpg"></a></div>
+	    <div><a href="{:url('index/slide3')}"><img src="__PUBLIC__/static/pic/3.jpg"></a></div>
+	  </div>
+	 </div>
+    </div>
+
+    <div class="layui-col-xs1" style="height:1000px;background-color: white;"></div>
+
+    <div class="layui-col-xs3" style="height:200px;background-color:blue;">
+      <div class="grid-demo grid-demo-bg1" >本地333</div>
+      <div class="layui-carousel" id="test4">
+	  <div carousel-item>
+	    <div><a href="{:url('index/slide1')}"><img src="__PUBLIC__/static/pic/1.jpg"></a></div>
+	    <div><a href="{:url('index/slide2')}"><img src="__PUBLIC__/static/pic/2.jpg"></a></div>
+	    <div><a href="{:url('index/slide3')}"><img src="__PUBLIC__/static/pic/3.jpg"></a></div>
+	  </div>
+	 </div>
+    </div>
+
+    <div class="layui-col-xs1" style="height:1000px;background-color: yellow;"></div>
+    
+{/block}
+{block name="slide2"}
+<script>
+layui.use('carousel', function(){
+  var carousel = layui.carousel;
+  //建造实例
+  carousel.render({
+    elem: '#test1'
+    ,width: '100%' //设置容器宽度
+    ,arrow: 'always' //始终显示箭头
+    //,anim: 'updown' //切换动画方式
+  });
+  carousel.render({
+    elem: '#test2'
+    ,width: '100%' //设置容器宽度
+    ,arrow: 'always' //始终显示箭头
+    ,anim: 'updown' //切换动画方式
+  });
+  carousel.render({
+    elem: '#test3'
+    ,width: '100%' //设置容器宽度
+    ,height:'70%'
+    ,arrow: 'always' //始终显示箭头
+    ,anim: 'updown' //切换动画方式
+  });
+  carousel.render({
+    elem: '#test4'
+    ,width: '100%' //设置容器宽度
+    ,arrow: 'always' //始终显示箭头
+    ,anim: 'updown' //切换动画方式
+  });
+
+});
+
+
+
+</script>
+{/block}
